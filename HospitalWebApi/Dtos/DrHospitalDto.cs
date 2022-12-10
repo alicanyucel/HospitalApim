@@ -7,9 +7,10 @@ namespace HospitalWebApi.Dtos
 
     {
         [Required]
-        public string DrTcNo { get; set; }
-        public string DrName { get; set; }
-        public string HospitalName { get; set; }
+        public string DoctorId { get; set; }
+        public string HospitalId { get; set; }
+        public string Hname { get; set; }
+        public string DName { get; set; }
 
     }
 }
