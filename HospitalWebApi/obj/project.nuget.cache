@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "vEL7xHtAGhiKPCvoHhIRB0C5sBnzBYS0GmsJ0vBYn6BDLD7Gp8z6eHczeBD3B3KMbfRCZj39ccQdS6YZF66q7g==",
+  "dgSpecHash": "sdOiyB9OmvtmWjx0U4S7U5n+Tz8trgRDuB2IbtJWwhj2qcjuEC/B0/sirpT8gYqGjUxVFMXy5oAmbPZJlFG5hw==",
   "success": true,
-  "projectFilePath": "C:\\Users\\Alican\\Source\\Repos\\HospitalNetCore6\\HospitalWebApi\\HospitalWebApi.csproj",
+  "projectFilePath": "C:\\Users\\Alican\\Source\\Repos\\HospitalApimSon\\HospitalWebApi\\HospitalWebApi.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Alican\\.nuget\\packages\\automapper\\12.0.0\\automapper.12.0.0.nupkg.sha512",
     "C:\\Users\\Alican\\.nuget\\packages\\automapper.extensions.microsoft.dependencyinjection\\12.0.0\\automapper.extensions.microsoft.dependencyinjection.12.0.0.nupkg.sha512",

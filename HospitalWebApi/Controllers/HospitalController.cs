@@ -41,6 +41,7 @@ namespace HospitalWebApi.Controllers
         [HttpPost]
         public IActionResult Post(Hospital hospital)
         {
+            // sadece doktorhospitalcontroler kaldı
             _hospitalService.Add(hospital);
             return Ok("hastane eklendi");
         }
