@@ -22,17 +22,6 @@ namespace HospitalWebApi.Controllers
             _mapper = mapper;
             _drhpservice = drhpservice;
         }
-        [HttpGet]
-        public IActionResult GetAll()
-        {
-           var result= _drhpservice.GetDoctorHospitals().ToList();
-            var drhpmap = _mapper.Map<List<DrHospitalDto>>(result);
-            if(drhpmap==null)
-            {
-                return BadRequest("hata");
-            }
-            return Ok(drhpmap);
-        }
         [HttpPost("{tc}")]
         public IActionResult GetByDoctorTc(string tc)
         {
