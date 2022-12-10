@@ -1,4 +1,6 @@
-﻿using Microsoft.AspNetCore.Http;
+﻿using AutoMapper;
+using HospitalWebApi.Business.Abstract;
+using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
 
 namespace HospitalWebApi.Controllers
@@ -7,5 +9,7 @@ namespace HospitalWebApi.Controllers
     [ApiController]
     public class DoctorHospitalControler : ControllerBase
     {
+        private readonly IMapper _mapper;
+        private readonly IDoctorHospitalDetailService _service;
     }
 }
