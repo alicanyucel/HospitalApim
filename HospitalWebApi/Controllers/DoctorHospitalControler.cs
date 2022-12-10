@@ -11,6 +11,7 @@ namespace HospitalWebApi.Controllers
     [ApiController]
     public class DoctorHospitalControler : ControllerBase
     {
+        //on yüz angular tarafı yazılacak.
         private readonly IDoctorService _drservice;
         private readonly IHospitalService _hpservice;
         private readonly IMapper _mapper;
