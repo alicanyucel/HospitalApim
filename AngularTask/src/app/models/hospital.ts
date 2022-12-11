@@ -1,5 +1,4 @@
-export class HospitalModel {
-  id: number = 0;
-  hname: string = '';
+export class Hospital {
+  name: string = '';
   adress: string = '';
 }

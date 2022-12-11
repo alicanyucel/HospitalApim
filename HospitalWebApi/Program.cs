@@ -36,7 +36,7 @@ if (app.Environment.IsDevelopment())
 // ayrýntýlý bilgi için =>
 // //https://learn.microsoft.com/tr-tr/aspnet/core/fundamentals/middleware/?view=aspnetcore-6.0
 app.UseHttpsRedirection();
-app.UseCors(builder => builder.WithOrigins("https://localhost:7069").AllowAnyHeader());
+app.UseCors(builder => builder.WithOrigins().AllowAnyHeader());
 app.UseAuthorization();
 app.MapControllers();
 app.Run();
