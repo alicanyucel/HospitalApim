@@ -1,1 +1,60 @@
-<p>doktor works!</p>
+<nav class="navbar navbar-light bg-success">
+  <div class="container-fluid">
+    <h2 style="color: beige;">Doktor Sayfası</h2>
+    <div class="d-flex">
+      <button type="button" style="color: white;" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">Doktor Ekle</button>
+
+    </div>
+
+  </div>
+</nav>
+<table class="table nt-3">
+  <thead>
+    <tr>
+
+      <th scope="col">Doktor Tc &nbsp; </th>
+      <th scope="col">Doktor Adı &nbsp;</th>
+      <th scope="col">Doktor Soyadı &nbsp;</th>
+
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of doctordata">
+      <td>{{row.Tc}}</td>
+      <td>{{row.doctorname}}</td>
+      <td>{{row.doctorlastname}}</td>
+    </tr>
+  </tbody>
+</table>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">DOKTOR BİLGİLERİ</h5>
+
+
+      </div>
+      <div class="modal-body">
+        <form [FormGroup]="formvalues">
+          <div class="mb-3">
+            <label for="exampleInputEmail1">Tc No</label>
+            <input type="text" class="form-control" required formControlName="doctortc" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Doktor ismini girin">
+          </div>
+          <div class="mb-3 form-group">
+            <label for="exampleInputPassword1">Doktor İsmi</label>
+            <input type="text" class="form-control" formControlName="doctorname" id="exampleInputPassword1" placeholder="Ad">
+          </div>
+          <div class="mb-3 form-group">
+            <label for="exampleInputPassword1">Doktor Soyad</label>
+            <input type="text" class="form-control" formControlName="doctorlastname" id="exampleInputPassword1" placeholder="Soyad">
+          </div>
+        </form>
+      </div>
+      <div class="modal-footer">
+        <button type="button" (click)="postDoctorDetay()" class="btn btn-warning">KAYDET</button>
+      </div>
+    </div>
+  </div>
+</div>
