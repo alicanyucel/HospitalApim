@@ -25,6 +25,11 @@ namespace HospitalWebApi.Business.Concrete
             _doctorDal.Delete(doctor);
         }
 
+        public List<Doctor> GetDoctorByHospital(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public Doctor GetDoctorById(int id)
         {
             return _doctorDal.Get(d => d.Id == id);

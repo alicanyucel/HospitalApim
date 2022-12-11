@@ -9,5 +9,7 @@ namespace HospitalWebApi.Business.Abstract
         void Add(DoctorHospital drhospital);
         void Update(DoctorHospital drhospital);
         void Delete(DoctorHospital drhospital);
+      
+       
     }
 }

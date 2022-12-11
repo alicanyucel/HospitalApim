@@ -20,18 +20,21 @@ namespace HospitalWebApi.Controllers
             _doctorservice = doctorService;
         }
         [HttpPost("{name}")]
-        public IActionResult GetByNameDoctor(string name)
+        public IActionResult GetByName(string name)
         {
-
-            List<Doctor> doctor = _doctorservice.GetDoctors().ToList();
+            List<Doctor> doctor =_doctorservice.GetDoctors().ToList();
             List<Doctor> item = new List<Doctor>();
             item = doctor;
             int i = 0;
             for (; i < item.Count; i++)
             {
 
+                if (item[i].Name != name)
+                {
 
-                if (item[i].Name == name )
+
+                }
+                else if (item[i].Name == name)
                 {
 
                     List<Doctor> bulunan = new List<Doctor>();
@@ -39,17 +42,10 @@ namespace HospitalWebApi.Controllers
                     return Ok(bulunan);
 
                 }
-                else if (item[i].Name!=name)
-                        {
-                    i++;
-                    List<Doctor> bulunan = new List<Doctor>();
-                    bulunan.Add(item[i]);
-                    return Ok(bulunan);
-                }
-               
-                else
-                    return BadRequest("hata");
-             }
+
+
+
+            }
             return Ok();
         }
         [HttpGet]

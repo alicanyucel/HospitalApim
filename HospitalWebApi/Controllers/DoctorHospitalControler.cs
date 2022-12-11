@@ -33,8 +33,12 @@ namespace HospitalWebApi.Controllers
             for (; i < item.Count; i++)
             {
 
-
-                if (item[i].TcNo == tc)
+                if (item[i].TcNo != tc)
+                {
+                   
+                   
+                }
+               else if (item[i].TcNo == tc)
                 {
 
                     List<Doctor> bulunan = new List<Doctor>();
@@ -42,16 +46,9 @@ namespace HospitalWebApi.Controllers
                     return Ok(bulunan);
 
                 }
-                else if (item[i].TcNo != tc)
-                {
-                    i++;
-                    List<Doctor> bulunan = new List<Doctor>();
-                    bulunan.Add(item[i]);
-                    return Ok(bulunan);
-                }
+                
 
-                else
-                    return BadRequest("hata");
+               
             }
             return Ok();
         }

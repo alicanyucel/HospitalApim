@@ -12,7 +12,8 @@ namespace HospitalWebApi.Business.Abstract
         void Add(Doctor doctor);
         void Update(Doctor doctor);
         void Delete(Doctor doctor);
-        
-        
+       
+
+
     }
 }
