@@ -15,7 +15,7 @@ namespace HospitalWebApi.Models
         public string LastName { get; set; }
         // aşağıdaki şeyi kapsullemek için private verdin oop gereği
         private ICollection<DoctorHospital> DoctorHospitals { get; set; }
-
+       
     }
     #endregion
 }

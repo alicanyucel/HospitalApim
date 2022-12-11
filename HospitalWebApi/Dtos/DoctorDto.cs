@@ -6,6 +6,6 @@ namespace HospitalWebApi.Dtos
     {
         public string Name { get; set; }
         public string TcNo { get; set; }
-
+        
     }
 }

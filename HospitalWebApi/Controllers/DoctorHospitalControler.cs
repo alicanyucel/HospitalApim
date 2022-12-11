@@ -4,6 +4,7 @@ using HospitalWebApi.Dtos;
 using HospitalWebApi.Models;
 using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace HospitalWebApi.Controllers
 {
@@ -12,17 +13,20 @@ namespace HospitalWebApi.Controllers
     public class DoctorHospitalControler : ControllerBase
     {
         //on yüz angular tarafı yazılacak.
+        private readonly HospitalContext _context;
         private readonly IDoctorService _drservice;
         private readonly IHospitalService _hpservice;
         private readonly IMapper _mapper;
         private readonly IDoctorHospitalDetailService _drhpservice;
-        public DoctorHospitalControler(IMapper mapper,IDoctorHospitalDetailService drhpservice,IDoctorService doctorService,IHospitalService hospitalService)
+        public DoctorHospitalControler(HospitalContext hospitalContext, IMapper mapper, IDoctorHospitalDetailService drhpservice, IDoctorService doctorService, IHospitalService hospitalService)
         {
+            _context = hospitalContext;
             _drservice = doctorService;
             _hpservice = hospitalService;
             _mapper = mapper;
             _drhpservice = drhpservice;
         }
+        
         [HttpPost("{tc}")]
         public IActionResult GetByDoctorTc(string tc)
         {
@@ -35,10 +39,10 @@ namespace HospitalWebApi.Controllers
 
                 if (item[i].TcNo != tc)
                 {
-                   
-                   
+
+
                 }
-               else if (item[i].TcNo == tc)
+                else if (item[i].TcNo == tc)
                 {
 
                     List<Doctor> bulunan = new List<Doctor>();
@@ -46,12 +50,12 @@ namespace HospitalWebApi.Controllers
                     return Ok(bulunan);
 
                 }
-                
 
-               
+
+
             }
             return Ok();
         }
-       
+
     }
 }

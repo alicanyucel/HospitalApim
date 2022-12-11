@@ -1,4 +1,5 @@
-﻿using HospitalWebApi.Models.Abstract;
+﻿using HospitalWebApi.Models;
+using HospitalWebApi.Models.Abstract;
 using System.ComponentModel.DataAnnotations;
 
 namespace HospitalWebApi.Dtos
@@ -11,6 +12,6 @@ namespace HospitalWebApi.Dtos
         public string HospitalId { get; set; }
         public string Hname { get; set; }
         public string DName { get; set; }
-
+       
     }
 }
