@@ -27,7 +27,7 @@ namespace HospitalWebApi.Controllers
             _drhpservice = drhpservice;
         }
         
-        [HttpPost("{tc}")]
+        [HttpGet("{tc}")]
         public IActionResult GetByDoctorTc(string tc)
         {
             List<Doctor> doctor = _drservice.GetDoctors().ToList();
