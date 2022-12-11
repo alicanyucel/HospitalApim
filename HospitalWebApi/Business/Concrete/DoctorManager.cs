@@ -34,7 +34,8 @@ namespace HospitalWebApi.Business.Concrete
         {
             return _doctorDal.Get(d => d.Id == id);
         }
-
+        
+        
         public Doctor GetDoctorByName(string name)
         {
             return _doctorDal.Get(d=>d.Name==name);

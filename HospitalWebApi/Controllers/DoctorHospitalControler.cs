@@ -13,16 +13,16 @@ namespace HospitalWebApi.Controllers
     public class DoctorHospitalControler : ControllerBase
     {
         //on yüz angular tarafı yazılacak.
-        private readonly HospitalContext _context;
+        
         private readonly IDoctorService _drservice;
-        private readonly IHospitalService _hpservice;
+    
         private readonly IMapper _mapper;
         private readonly IDoctorHospitalDetailService _drhpservice;
-        public DoctorHospitalControler(HospitalContext hospitalContext, IMapper mapper, IDoctorHospitalDetailService drhpservice, IDoctorService doctorService, IHospitalService hospitalService)
+        public DoctorHospitalControler(IMapper mapper, IDoctorHospitalDetailService drhpservice, IDoctorService doctorService)
         {
-            _context = hospitalContext;
+            
             _drservice = doctorService;
-            _hpservice = hospitalService;
+            
             _mapper = mapper;
             _drhpservice = drhpservice;
         }
@@ -50,7 +50,7 @@ namespace HospitalWebApi.Controllers
                     return Ok(bulunan);
 
                 }
-
+               
 
 
             }
