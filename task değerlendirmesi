@@ -1,0 +1,7 @@
+İyi günler Ali Can.
+Öncelikle teşekkür ederiz taskı zamanında gönderdiğin için ancak ne yazık ki olumlu olarak dönüş yapamıyoruz.
+Sonraki görüşmelerinde yardımcı olması açısından taskın değerlendirmesiyle ilgili birkaç yorumumu paylaşıyorum.
+Controllerlarda modeller yerine dtoları kullanman controller'ın model kısmından bağımsız olması açısından daha iyi olurdu. Mapper'ı business katmanında kullanman daha iyi olabilir.
+Abstract classlarının altında interfacelerin bulunması da pek anlamlı olmamış klasörlerin isimlerinin interfaces olması daha mantıklı olabilirdi.
+Servis tanımlarını neden transient değil scope olarak kullandığını da tam olarak anlayabilmiş değilim açıkçası.
+Sonraki görüşmelerin için bol şans diliyorum. Başarılar dilerim.
